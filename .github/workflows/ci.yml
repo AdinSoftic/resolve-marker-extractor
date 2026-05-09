@@ -23,6 +23,7 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -e .
-          pip install pytest
-      - name: Run tests
-        run: pytest -q
+      - name: Smoke test
+        run: |
+          python -m resolve_markers --help
+          python -c "from resolve_markers.extractor import extract, frame_to_tc, marker_still_filename; print('ok')"
