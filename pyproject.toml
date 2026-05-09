@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "resolve-marker-extractor"
+version = "0.1.0"
+description = "Extract timeline markers from a DaVinci Resolve Project.db (read-only, unofficial)."
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.10"
+authors = [{ name = "AdinSoftic" }]
+keywords = ["davinci-resolve", "video", "markers", "sqlite", "zstd"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: End Users/Desktop",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Multimedia :: Video",
+]
+dependencies = [
+  "zstandard>=0.20",
+]
+
+[project.scripts]
+resolve-markers = "resolve_markers.__main__:main"
+
+[project.urls]
+Homepage = "https://github.com/AdinSoftic/resolve-marker-extractor"
+Issues = "https://github.com/AdinSoftic/resolve-marker-extractor/issues"
+
+[tool.setuptools.packages.find]
+include = ["resolve_markers*"]

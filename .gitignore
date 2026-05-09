@@ -1,0 +1,31 @@
+# Ignore database files
+Project.db
+Project.db-wal
+Project.db-shm
+*.drp
+*.drt
+
+# Output directories produced by the tool
+markers_out/
+stills/
+*.csv
+!examples/*.csv
+
+# Python
+__pycache__/
+.pytest_cache/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+.env
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
